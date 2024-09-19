@@ -1,0 +1,192 @@
+/* bandoso.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ngăn kéo sang ngang */
+}
+
+html {
+  overflow-x: hidden; /* Ngăn kéo sang ngang */
+}
+
+header {
+  background-color: #b5e2fa;
+  color: #184e77;
+  padding: 10px;
+  text-align: center;
+}
+.chuthich {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #eff7f6;
+}
+
+#left {
+  flex: 1;
+  min-width: 300px;
+}
+
+#right {
+  flex: 2;
+}
+
+/* bandomap.css */
+
+#legend {
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #b5e2fa;
+  border-radius: 5px;
+  box-shadow: 0 20px 10px rgb(29, 29, 253);
+  margin-bottom: 10px;
+
+  height: 530px;
+  overflow: auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.legend-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+#map {
+  width: 100%;
+  height: 480px;
+}
+
+/* CSS for the Popup */
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+#popup-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#popup-close-btn,
+#goto-map-btn,
+#read-more-btn {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#popup-close-btn {
+  background-color: #023947;
+  color: #fff;
+}
+
+#goto-map-btn {
+  background-color: #219ebc;
+  color: #fff;
+}
+
+#read-more-btn {
+  background-color: #219ebc;
+  color: #fff;
+}
+
+#popup-content button {
+  flex: 1;
+}
+
+#popup-close-btn:hover,
+#goto-map-btn:hover,
+#read-more-btn:hover {
+  background-color: #555;
+}
+#popup-container.active {
+  display: flex;
+}
+#popup-content button {
+  flex: 1;
+  margin: 5px 0; /* Thêm khoảng cách giữa các button */
+}
+#popup-close-btn {
+  margin-top: 10px; /* Đặt khoảng cách giữa nút close và 2 button phía dưới */
+}
+/* Thêm media query để điều chỉnh thiết lập cho màn hình nhỏ */
+@media only screen and (max-width: 768px) {
+  #right {
+    flex: unset; /* Bỏ giới hạn flex cho phần bên phải */
+    width: 100%; /* Đảm bảo phần bên phải chiếm hết chiều ngang */
+  }
+}
+/* animated */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animated-heading h5 {
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+
+.animated-heading i {
+  animation: pulse 1s infinite;
+}
+
+/* CSS responsive khi màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 24px; /* Kích thước chữ giảm lại khi màn hình nhỏ hơn hoặc bằng 768px */
+  }
+}

@@ -1,0 +1,91 @@
+    1. javaScript bandoso.html
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const popupContainer = document.getElementById("popup-container");
+            const popupTitle = document.getElementById("popup-title");
+            const popupCloseBtn = document.getElementById("popup-close-btn");
+            const gotoMapBtn = document.getElementById("goto-map-btn");
+            const readMoreBtn = document.getElementById("read-more-btn");
+            const legendItems = document.querySelectorAll(".legend-item");
+
+            // Coordinates for each location
+            const locationCoordinates = {
+                "Bảo Tàng Văn Hóa Sa Huỳnh": { latitude: 15.82457, longitude: 108.22634 },
+                "Di Tích Hòn Tàu": { latitude: 15.73313, longitude: 108.15443 },
+                "Hòn Bằng": { latitude: 15.82295, longitude: 108.22441 },
+                "Thủy Điện Duy Sơn": { latitude: 15.78948, longitude: 108.224 },
+                "Lăng Mộ Nguyễn Phúc Kỳ": { latitude: 15.79306, longitude: 108.2248 },
+                "Lăng Mộ Mạc Cảnh Huống": { latitude: 15.82309, longitude: 108.23499 },
+                "Miếu Bà Hương": { latitude: 15.80658, longitude: 108.22693 },
+                "Nhà Thờ Ngũ Xã Trà Kiệu": { latitude: 15.82334, longitude: 108.23668 },
+                "Phế Tích Tháp Dương Bi": { latitude: 15.81028, longitude: 108.22266 },
+                "TT Thánh Mẫu Trà Kiệu": { latitude: 15.82465, longitude: 108.23271 },
+                "Đình Làng Phú Nham Đông": { latitude: 15.80645, longitude: 108.21167 },
+                "Đồng Sen Trà Lý": { latitude: 15.77354, longitude: 108.16681 },
+            };
+
+            for (const item of legendItems) {
+                item.addEventListener("click", function () {
+                    const title = item.querySelector("span").textContent;
+                    popupTitle.textContent = title;
+                    popupContainer.classList.add("active");
+
+                    readMoreBtn.removeEventListener("click", goToReadMorePage);
+                    readMoreBtn.addEventListener("click", goToReadMorePage);
+                });
+            }
+
+            popupCloseBtn.addEventListener("click", function () {
+                popupContainer.classList.remove("active");
+            });
+
+            gotoMapBtn.addEventListener("click", function () {
+                const title = popupTitle.textContent;
+                const { latitude, longitude } = locationCoordinates[title];
+                goToLocation(latitude, longitude);
+                popupContainer.classList.remove("active");
+            });
+
+            function goToReadMorePage() {
+                const filename = getFilenameForLocation(popupTitle.textContent);
+                window.location.href = filename;
+            }
+
+            function getFilenameForLocation(title) {
+                switch (title) {
+                    case "Bảo Tàng Văn Hóa Sa Huỳnh":
+                        return "BaoTangVanHoaSaHuynh.html";
+                    case "Di Tích Hòn Tàu":
+                        return "DiTichHonTau.html";
+                    case "Hòn Bằng":
+                        return "HonBang.html";
+                    case "Thủy Điện Duy Sơn":
+                        return "ThuyDienDuySon.html";
+                    case "Lăng Mộ Nguyễn Phúc Kỳ":
+                        return "LangMoNguyenPhucKy.html";
+                    case "Lăng Mộ Mạc Cảnh Huống":
+                        return "LangMoMacCanhHuong.html";
+                    case "Miếu Bà Hương":
+                        return "MieuBaHuong.html";
+                    case "Nhà Thờ Ngũ Xã Trà Kiệu":
+                        return "NhaThoNguXaTraKieu.html";
+                    case "Phế Tích Tháp Dương Bi":
+                        return "PheTichThapDuongBi.html";
+                    case "TT Thánh Mẫu Trà Kiệu":
+                        return "TTThanhMauTraKieu.html";
+                    case "Đình Làng Phú Nham Đông":
+                        return "DinhLangPhuNhamDong.html";
+                    case "Đồng Sen Trà Lý":
+                        return "DongSenTraLi.html";
+                    default:
+                        return "bandoso.html";
+                }
+            }
+
+            function goToLocation(latitude, longitude) {
+                var mapFrame = document.getElementById('map');
+                var mapURL = "https://www.google.com/maps/d/embed?mid=1Uu2ibtAQSsnTnTUHm4FfqwdzlNWYbLM&ehbc=2E312F";
+                mapFrame.src = mapURL + "&ll=" + latitude + "," + longitude;
+            }
+        });
+    </script> -->

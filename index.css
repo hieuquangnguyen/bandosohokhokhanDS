@@ -1,0 +1,87 @@
+/* index.css */
+
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* index.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: #0092d7;
+}
+
+.image-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-section h4 {
+  /* không cho xuống dòng */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* hiển thị giữa dòng */
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  z-index: 1;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-section img {
+  display: block;
+  width: 100vw;
+  height: 100%;
+  object-fit: contain;
+}
+
+.form-section {
+  background-color: #fef9ef;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.form-section p {
+  color: #003554;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0092d7;
+  border: 1px solid black;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2904ae;
+}
+
+@media screen and (max-width: 768px) {
+  .tienphongcds {
+    font-size: 27px;
+  }
+}
